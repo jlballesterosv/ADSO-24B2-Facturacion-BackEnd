@@ -3,6 +3,7 @@ from flask_controller import FlaskController
 from src.models.productos import Productos
 from src.app import app
 from src.schemas.productos_schema import productos_schema, producto_schema
+import re
 
 class ProductosController(FlaskController):
 
