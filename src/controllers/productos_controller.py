@@ -32,8 +32,7 @@ class ProductosController(FlaskController):
                              , categoria=request.json["categoria"])
         producto_repetido =  Productos.traer_producto_por_descripcion(producto_almacenar.descripcion)
         if producto_repetido:
-            return jsonify({ 'error': 'La descripción no se puede repetir.' }), 400 
-                                   
+            return jsonify({ 'error': 'La descripción no se puede repetir.' }), 400                                    
         try:
             Productos.crear_producto(producto_almacenar)
             return jsonify({ 'success': 'Producto creado correctamente.' }), 200 
