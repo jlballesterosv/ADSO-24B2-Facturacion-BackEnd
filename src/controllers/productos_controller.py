@@ -36,7 +36,7 @@ class ProductosController(FlaskController):
             return jsonify({ 'error': 'La descripción no se puede repetir.' }), 400                                    
         try:
             Productos.crear_producto(producto_almacenar)
-            return jsonify({ 'success': 'Producto creado correctamente.' }), 200 
+            return jsonify({ 'success': 'Producto creado correctamente.' }), 201 
         except:            
             return jsonify({ 'error': 'Error al almacenar el producto.' }), 400 
 

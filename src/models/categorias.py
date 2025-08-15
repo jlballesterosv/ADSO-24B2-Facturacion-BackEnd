@@ -12,5 +12,13 @@ class Categorias(Base):
 
     def traer_categorias():
         categorias = session.query(Categorias).all()
-        return categorias      
+        return categorias     
     
+    def traer_categoria_por_id(id):
+        categoria = session.query(Categorias).filter(Categorias.id == id).first()
+        return categoria
+    
+    def crear_categoria(categoria):
+        categoria = session.add(categoria)
+        session.commit()
+        return categoria
