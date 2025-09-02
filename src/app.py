@@ -15,5 +15,5 @@ Base.metadata.create_all(engine)
 if __name__ == '__main__':
     app.run(debug=True)
 
-
+# Run the Flask application
 
